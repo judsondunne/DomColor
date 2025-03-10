@@ -41,7 +41,8 @@ def dominant_color():
         # Convert the image to a numpy array of pixels
         ar = np.asarray(im)
         shape = ar.shape  # (height, width, channels)
-        pixels = ar.reshape(np.product(shape[:2]), shape[2]).astype(float)
+        # Use np.prod instead of np.product for compatibility
+        pixels = ar.reshape(np.prod(shape[:2]), shape[2]).astype(float)
         
         # Run k-means clustering on the pixels using NUM_INITIAL_CLUSTERS clusters
         centers, _ = scipy.cluster.vq.kmeans(pixels, NUM_INITIAL_CLUSTERS)
