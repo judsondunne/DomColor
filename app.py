@@ -1,6 +1,7 @@
 from __future__ import print_function
 import binascii
 from flask import Flask, request, jsonify
+from flask_cors import CORS  # Import Flask-CORS
 import requests
 from io import BytesIO
 from PIL import Image
@@ -9,6 +10,7 @@ import scipy.cluster
 from scipy.cluster.hierarchy import linkage, fcluster
 
 app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes
 
 # Number of clusters for the initial k-means (we use more than we ultimately return)
 NUM_INITIAL_CLUSTERS = 10
