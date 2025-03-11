@@ -1,7 +1,7 @@
 Flask
+flask-cors
 requests
 Pillow
 numpy
 scipy
-gunicorn
-flask-cors
+vercel-wsgi

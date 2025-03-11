@@ -91,3 +91,7 @@ def dominant_color():
 
 if __name__ == '__main__':
     app.run(port=3048)
+
+# Wrap the Flask app for Vercel using vercel-wsgi
+from vercel_wsgi import run_wsgi
+handler = run_wsgi(app)

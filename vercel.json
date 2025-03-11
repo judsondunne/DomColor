@@ -1,0 +1,8 @@
+{
+    "functions": {
+      "api/dominant_color.py": {
+        "runtime": "python3.9"
+      }
+    }
+  }
+  
