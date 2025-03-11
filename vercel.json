@@ -1,6 +1,6 @@
 {
     "functions": {
-      "api/dominant_color.py": {
+      "api/**/*.py": {
         "runtime": "python@3.9.0"
       }
     }
